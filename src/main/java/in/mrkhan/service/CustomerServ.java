@@ -19,6 +19,8 @@ public class CustomerServ {
 	 @Autowired 
 	 private ProductRepository productRepository;
 	 
+	 public static final String FIRSTNAME="Smith";
+	 
 	public Customer saveOrUpdateCustomer(OrderRequest request)
 	{
 		String status="";
@@ -37,8 +39,15 @@ public class CustomerServ {
 			return customerRepository.save(request.getCustomer());
 			
 		}
-		
 
+		
 	}
+
+	public String nameValid(String first)
+	{
+		first=FIRSTNAME;
+		return first;
+	}
+
 
 }
