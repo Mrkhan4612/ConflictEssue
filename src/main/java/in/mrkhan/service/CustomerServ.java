@@ -19,6 +19,8 @@ public class CustomerServ {
 	 @Autowired 
 	 private ProductRepository productRepository;
 	 
+	 public static final String LASTNAME="cena";
+	 
 	public Customer saveOrUpdateCustomer(OrderRequest request)
 	{
 		String status="";
@@ -39,6 +41,13 @@ public class CustomerServ {
 		}
 		
 
+	}
+	
+	
+	public String lastNam(String lastname)
+	{
+		lastname=LASTNAME;
+		return lastname;
 	}
 
 }
